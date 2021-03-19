@@ -91,8 +91,8 @@ function Post(){
         reader.onload = async() => {
             const url = reader.result;
         
-            let transaction = await createDataTransaction(url,REACT_APP_KEY);
-            await signAndSubmitTransaction(transaction, REACT_APP_KEY);
+            let transaction = await createDataTransaction(url,JSON.parse(REACT_APP_KEY));
+            await signAndSubmitTransaction(transaction, JSON.parse(REACT_APP_KEY));
 
             history.push('/')
         };
